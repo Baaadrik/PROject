@@ -1,0 +1,101 @@
+.sunsistem {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+#basketball {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 100px 0 0 930px;
+}
+#football_goal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 700px 0 0 200px;
+}
+
+
+#puck {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 530px 0 0 100px;
+
+}
+
+#ball {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 360px 0 0 800px;
+}
+
+#stick {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 600px 0 0 900px;
+}
+#volleyball_net {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 700px 0px 0 500px;
+}
+#baseball_bat {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 400px 0 0 500px;
+
+}
+#ice_skates {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 760px 0 0 600px;
+
+}
+#skippin_grope {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 150px 0 0 600px;
+
+}
+#training_apparatus {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 200px 0 0 400px;
+
+}
+#treadmill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 450px 0 0 900px;
+
+}
+#weights {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 250px 0 0 200px;
+
+}
+
+
+
+#message {
+    position: absolute;
+    font-family: "Times New Roman", Times, serif;
+    background-color: black;
+    color: white;
+    font-size: 20pt;	
+    top: 0;
+    left: 0;
+    margin: 100px 0 0 320px;
+}

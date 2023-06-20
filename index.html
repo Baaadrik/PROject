@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Игра</title>
+
+<link href="style.css" rel="stylesheet">
+</head>
+<body>
+<h1>Find objects</h1>
+
+<div class="sunsistem">
+	<img src="images\fon.jpg">
+</div>
+
+<span class="sport" >
+	<img id="ball"  src="images/ball.png" width="110" height="110">
+	<img id="puck"  src="images/puck.png" width="160" height="120">
+	<img id="stick" src="images/stick.png" width="100" height="200">
+	<img id="football_goal"  src="images/football_goal.png" width="110" height="110">
+	<img id="basketball"    src="images/basketball.png" width="110" height="110">
+	<img id="volleyball_net" src="images/volleyball_net.png" width="110" height="110">
+	<img id="baseball_bat"  src="images/baseball_bat.png" width="110" height="110">
+	<img id="ice_skates" src="images/ice_skates.png" width="110" height="110">
+	<img id="skippin_grope" src="images/skippin_grope.png" width="110" height="110">
+	<img id="training_apparatus"	src="images/training_apparatus.png" width="110" height="110">
+	<img id="treadmill" src="images/treadmill.png" width="110" height="110">
+	<img id="weights" 	src="images/weights.png" width="110" height="110">
+	
+</span>
+
+<span id="message"></span>
+
+</body>
+</html>
+
+<script type="text/javascript">
+
+"use strict";
+
+const MASSIV = [
+	"ball",
+	"puck",
+	"stick",
+	"basketball",
+	"football_goal",
+	"volleyball_net",
+	"baseball_bat",
+	"ice_skates",
+	"skippin_grope",
+	"training_apparatus",
+	"treadmill",
+	"weights" ,
+];
+
+// https://stackoverflow.com/a/2450976
+const shuffle = array => {
+	let currentIndex = array.length, randomIndex;
+
+	// While there remain elements to shuffle.
+	while (currentIndex !== 0) {
+
+		// Pick a remaining element.
+		randomIndex = Math.floor(Math.random() * currentIndex);
+		currentIndex--;
+
+		// And swap it with the current element.
+		[array[currentIndex], array[randomIndex]] = [
+		array[randomIndex], array[currentIndex]];
+		}
+
+	return array;
+}
+
+const shuffledObjects = shuffle(MASSIV);
+let currentIndex = 0;
+
+const addEventListener = () => {
+	if (currentIndex >= shuffledObjects.length) {
+		document.getElementById("message").innerText = "You completed the game!";
+		return;
+		}
+
+	document.getElementById("message").innerText = "Hello! Help me find an object " + shuffledObjects[currentIndex];
+
+	document.getElementById(shuffledObjects[currentIndex]).addEventListener('click', function (event) {
+			event.preventDefault();
+
+			this.style.opacity = '0';
+			this.style.transition = '0.5s';
+
+			++currentIndex;
+
+			addEventListener();
+		});
+};
+
+addEventListener();
+
+</script>
